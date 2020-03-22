@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "id": "modid",
+  "version": "${version}",
+
+  "name": "Create - Fabric Edition",
+  "description": "A port of Create for the Fabric Mod platform. \n ",
+  "authors": [
+    "MrBonono63 [Curse]"
+  ],
+  "contact": {
+    "homepage": "",
+    "sources": ""
+  },
+
+  "license": "MIT License",
+  "icon": "assets/create/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "net.MrBonono63.create.Main"
+    ]
+  },
+  "mixins": [
+    "create.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.7.4",
+    "fabric": "*",
+    "minecraft": ">=1.15.2"
+  },
+  "suggests": {
+    "modmenu": ">=1.10.2"
+  }
+}
