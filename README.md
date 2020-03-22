@@ -11,3 +11,5 @@ Thanks!
 
 This mod is a port of Shimibub's mod for 1.14.4 under the MIT License,
 The original mod is available at https://github.com/Creators-of-Create/Create and https://www.curseforge.com/minecraft/mc-mods/create
+
+You are allowed to fork, modify, port, publish, etc. under the MIT License
