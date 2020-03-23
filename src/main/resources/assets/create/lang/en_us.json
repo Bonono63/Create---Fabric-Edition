@@ -1166,5 +1166,5 @@
 	"item.create.logistical_dial.tooltip": "WIP",
 	"item.create.logistical_filter.tooltip": "WIP",
 
-	"itemGroup.create": "Create"
+	"itemGroup.create.group": "Create"
 }

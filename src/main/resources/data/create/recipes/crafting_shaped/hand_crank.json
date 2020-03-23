@@ -1,0 +1,29 @@
+{
+    "type": "crafting_shaped",
+        "pattern": [
+            " A ",
+            "PPP",
+			"  L"
+        ],
+        "key": {
+            "L": {
+                "item": "create:andesite_alloy"
+            },
+			"P": {
+                "tag": "minecraft:planks"
+            },
+			"A": {
+                "tag": "forge:plates/brass"
+            }
+        },
+	"result": {
+		"item": "create:hand_crank",
+		"count": 1
+	},
+	"conditions": [
+		{
+			"type": "create:module",
+			"module": "contraptions"
+		}
+	]
+}

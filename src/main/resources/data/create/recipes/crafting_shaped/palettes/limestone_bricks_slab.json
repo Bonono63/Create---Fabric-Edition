@@ -1,0 +1,21 @@
+{
+    "type": "crafting_shaped",
+        "pattern": [
+			"SSS"
+        ],
+        "key": {
+			"S": {
+                "item": "create:limestone_bricks"
+            }
+        },
+	"result": {
+		"item": "create:limestone_bricks_slab",
+		"count": 6
+	},
+	"conditions": [
+		{
+			"type": "create:module",
+			"module": "palettes"
+		}
+	]
+}

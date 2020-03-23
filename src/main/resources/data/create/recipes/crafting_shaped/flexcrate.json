@@ -1,0 +1,23 @@
+{
+    "type": "crafting_shaped",
+        "pattern": [
+            "BBB",
+            "B B",
+			"BBB"
+        ],
+        "key": {
+            "B": {
+                "item": "create:brass_casing"
+            }
+        },
+	"result": {
+		"item": "create:flexcrate",
+		"count": 4
+	},
+	"conditions": [
+		{
+			"type": "create:module",
+			"module": "logistics"
+		}
+	]
+}

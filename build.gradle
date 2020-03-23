@@ -10,6 +10,33 @@ archivesBaseName = project.archives_base_name
 version = project.mod_version
 group = project.maven_group
 
+repositories {
+	mavenLocal()
+	maven {
+		name = "Fabric"
+		url = "https://maven.fabricmc.net/"
+	}
+	maven {
+		name = "NerdHubMC"
+		url = "https://maven.abusedmaster.xyz/"
+	}
+	maven {
+		url "http://server.bbkr.space:8081/artifactory/libs-release"
+	}
+	maven {
+		name = "CurseForge"
+		url = "https://minecraft.curseforge.com/api/maven"
+	}
+	maven {
+		name = "JitPack"
+		url = "https://jitpack.io"
+	}
+	maven {
+		name = "GitHub"
+		url = "https://maven.pkg.github.com"
+	}
+}
+
 dependencies {
 	//to change the versions see the gradle.properties file
 	minecraft "com.mojang:minecraft:${project.minecraft_version}"
@@ -21,6 +48,9 @@ dependencies {
 
 	modCompile ("io.github.prospector:modmenu:${project.modmenu_version}")
 	modImplementation ("io.github.prospector:modmenu:${project.modmenu_version}")
+
+	modCompile ("me.shedaniel:RoughlyEnoughItems:${project.rei_version}") { exclude(module: "ModMenu") }
+	modImplementation ("me.shedaniel:RoughlyEnoughItems:${project.rei_version}") { exclude(module: "ModMenu") }
 
 }
 
