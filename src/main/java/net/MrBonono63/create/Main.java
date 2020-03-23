@@ -1,5 +1,6 @@
 package net.MrBonono63.create;
 
+import net.MrBonono63.create.registry.CreateBlocks;
 import net.MrBonono63.create.registry.CreateItems;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
@@ -20,6 +21,7 @@ public class Main implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		CreateItems.init();
+		CreateBlocks.init();
 		System.out.println("Hello Fabric world!");
 	}
 }

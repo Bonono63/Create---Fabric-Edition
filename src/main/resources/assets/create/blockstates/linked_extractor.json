@@ -1,0 +1,15 @@
+{
+  "forge_marker": 1,
+  "variants": {
+    "powered": {
+      "true": { "model": "create:block/extractor/horizontal_wireless_powered" },
+      "false": { "model": "create:block/extractor/horizontal_wireless" }
+    },
+    "facing": {
+      "south": { "y": 180 },
+      "east": { "y": 90 },
+      "north": { "y": 0 },
+      "west": { "y": 270 }
+    }
+  }
+}

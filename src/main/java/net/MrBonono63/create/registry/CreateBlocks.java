@@ -1,7 +1,10 @@
 package net.MrBonono63.create.registry;
 
 import net.MrBonono63.create.Main;
+import net.fabricmc.fabric.api.block.FabricBlockSettings;
 import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
+import net.minecraft.block.Material;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.util.registry.Registry;
@@ -10,7 +13,15 @@ import java.util.function.Function;
 
 public class CreateBlocks {
 
+    // TODO add conveyers etc.
     //public static final Block Shaft = register("", new );
+
+    //Ores
+    public static final Block COPPER_ORE = register("copper_ore", new Block(FabricBlockSettings.copy(Blocks.IRON_ORE).build()));
+    public static final Block ZINC_ORE = register("zinc_ore", new Block(FabricBlockSettings.copy(Blocks.GOLD_ORE).build()));
+
+    //Glass
+    public static final Block TILED_GLASS = register("tiled_glass", new Block(FabricBlockSettings.copy(Blocks.GLASS).build()));
 
     private CreateBlocks() {
     }

@@ -42,6 +42,8 @@ public class CreateItems {
     public static final Item REFINED_RADIANCE = register("refined_radiance", new Item(newSettings()));
     public static final Item ELECTRON_TUBE = register("electron_tube", new Item(newSettings()));
     public static final Item INTEGRATED_CIRCUIT = register("integrated_circuit", new Item(newSettings()));
+    public static final Item WHEAT_FLOUR = register("wheat_flour", new Item(newSettings()));
+    public static final Item DOUGH = register("dough", new Item(newSettings()));
 
     //Schematics
     public static final Item EMPTY_SCHEMATIC = register("empty_schematic", new Item(newSettings()));
