@@ -1,7 +1,10 @@
 package net.MrBonono63.create.registry;
 
+import net.MrBonono63.create.items.CreatePickaxeItem;
 import net.MrBonono63.create.items.GlintIngot;
 import net.minecraft.item.Item;
+import net.minecraft.item.PickaxeItem;
+import net.minecraft.item.ToolMaterials;
 import net.minecraft.util.registry.Registry;
 import net.MrBonono63.create.Main;
 
@@ -66,14 +69,18 @@ public class CreateItems {
     public static final Item BLUEPRINT_AND_QUILL = register("blueprint_and_quill", new Item(newSettings()));
     public static final Item BLUEPRINT = register("blueprint", new Item(newSettings()));
 
-    //TOOLS TODO add tool properties (make the tools usable)
+    /*
+    *TOOLS
+    * TODO add tool properties (make the tools usable)
+     */
+
     //brass tools
     public static final Item WRENCH = register("wrench", new Item(newSettings()));
     public static final Item GOGGLES = register("goggles", new Item(newSettings()));
 
 
     //blaze tools
-    public static final Item BLAZING_PICKAXE = register("blazing_pickaxe", new Item(newSettings()));
+    public static final Item BLAZING_PICKAXE = register("blazing_pickaxe", new CreatePickaxeItem(ToolMaterials.GOLD, 1, -2.8f, newSettings()));
     public static final Item BLAZING_SHOVEL = register("blazing_shovel", new Item(newSettings()));
     public static final Item BLAZING_AXE = register("blazing_axe", new Item(newSettings()));
     public static final Item BLAZING_SWORD = register("blazing_sword", new Item(newSettings()));

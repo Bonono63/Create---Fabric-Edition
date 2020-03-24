@@ -53,8 +53,6 @@ public class CreateBlocks {
     * PALETTES
     * TODO add connected textures for glass blocks etc.
     * TODO add pillar block types
-    * TODO fix stairs corner blocks
-    * TODO fix slab block states
     * */
 
     //Glass
@@ -115,7 +113,7 @@ public class CreateBlocks {
     public static final Block DOLOMITE_STAIRS = register("dolomite_stairs", new CreateStairsBlock(DOLOMITE.getDefaultState(), FabricBlockSettings.copy(DOLOMITE).build()));
     public static final Block DOLOMITE_BRICKS = register("dolomite_bricks", new Block(FabricBlockSettings.copy(DOLOMITE).build()));
     public static final Block POLISHED_DOLOMITE = register("polished_dolomite", new Block(FabricBlockSettings.copy(DOLOMITE).build()));
-    public static final Block DOLOMITE_PILLAR = register("dolomite_pillar", new Block(FabricBlockSettings.copy(DOLOMITE).build()));
+    public static final Block DOLOMITE_PILLAR = register("dolomite_pillar", new PillarBlock(FabricBlockSettings.copy(DOLOMITE).build()));
     public static final Block DOLOMITE_LAYERS = register("dolomite_layers", new Block(FabricBlockSettings.copy(DOLOMITE).build()));
 
     //LIMESTONE
@@ -124,7 +122,7 @@ public class CreateBlocks {
     public static final Block LIMESTONE_SLAB = register("limestone_slab", new CreateSlabBlock(FabricBlockSettings.copy(LIMESTONE).build()));
     public static final Block LIMESTONE_WALL = register("limestone_wall", new WallBlock(FabricBlockSettings.copy(LIMESTONE).build()));
     public static final Block LIMESTONE_STAIRS = register("limestone_stairs", new CreateStairsBlock(LIMESTONE.getDefaultState(),FabricBlockSettings.copy(LIMESTONE).build()));
-    public static final Block LIMESTONE_PILLAR = register("limestone_pillar", new Block(FabricBlockSettings.copy(LIMESTONE).build()));
+    public static final Block LIMESTONE_PILLAR = register("limestone_pillar", new PillarBlock(FabricBlockSettings.copy(LIMESTONE).build()));
     public static final Block LIMESTONE_LAYERS = register("limestone_layers", new Block(FabricBlockSettings.copy(LIMESTONE).build()));
 
     //WEATHERED LIMESTONE
@@ -132,7 +130,7 @@ public class CreateBlocks {
     public static final Block WEATHERED_LIMESTONE_STAIRS = register("weathered_limestone_stairs", new CreateStairsBlock(WEATHERED_LIMESTONE.getDefaultState(),FabricBlockSettings.copy(WEATHERED_LIMESTONE).build()));
     public static final Block WEATHERED_LIMESTONE_SLAB = register("weathered_limestone_slab", new CreateSlabBlock(FabricBlockSettings.copy(WEATHERED_LIMESTONE).build()));
     public static final Block WEATHERED_LIMESTONE_WALL = register("weathered_limestone_wall", new WallBlock(FabricBlockSettings.copy(WEATHERED_LIMESTONE).build()));
-    public static final Block WEATHERED_LIMESTONE_PILLAR = register("weathered_limestone_pillar", new Block(FabricBlockSettings.copy(WEATHERED_LIMESTONE).build()));
+    public static final Block WEATHERED_LIMESTONE_PILLAR = register("weathered_limestone_pillar", new PillarBlock(FabricBlockSettings.copy(WEATHERED_LIMESTONE).build()));
     public static final Block WEATHERED_LIMESTONE_LAYERS = register("weathered_limestone_layers", new Block(FabricBlockSettings.copy(WEATHERED_LIMESTONE).build()));
 
     //WEATHERED LIMESTONE BRICKS
@@ -165,7 +163,7 @@ public class CreateBlocks {
     public static final Block POLISHED_SCORIA_SLAB = register("polished_scoria_slab", new CreateSlabBlock(FabricBlockSettings.copy(NATURAL_SCORIA).build()));
     public static final Block SCORIA_BRICKS = register("scoria_bricks", new Block(FabricBlockSettings.copy(NATURAL_SCORIA).build()));
     public static final Block SCORIA_LAYERS = register("scoria_layers", new Block(FabricBlockSettings.copy(NATURAL_SCORIA).build()));
-    public static final Block SCORIA_PILLAR = register("scoria_pillar", new Block(FabricBlockSettings.copy(NATURAL_SCORIA).build()));
+    public static final Block SCORIA_PILLAR = register("scoria_pillar", new PillarBlock(FabricBlockSettings.copy(NATURAL_SCORIA).build()));
 
     //DARK SCORIA
     public static final Block DARK_SCORIA = register("dark_scoria", new Block(FabricBlockSettings.copy(Blocks.ANDESITE).build()));
