@@ -1,0 +1,6 @@
+{
+  "parent": "create:item/rose_quartz_tool",
+  "textures": {
+    "layer0": "create:item/rose_quartz_pickaxe"
+  }
+}

@@ -11,11 +11,38 @@ public class ClientMain implements ClientModInitializer {
     public void onInitializeClient() {
         BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getTranslucent(),
                 CreateBlocks.TILED_GLASS_PANE,
-                CreateBlocks.VERTICAL_FRAMED_GLASS,
-                CreateBlocks.HORIZONTAL_FRAMED_GLASS,
                 CreateBlocks.TILED_GLASS,
 
-                CreateBlocks.HORIZONTAL_FRAMED_GLASS_PANE
+                CreateBlocks.VERTICAL_FRAMED_GLASS,
+                CreateBlocks.VERTICAL_FRAMED_GLASS_PANE,
+
+                CreateBlocks.HORIZONTAL_FRAMED_GLASS,
+                CreateBlocks.HORIZONTAL_FRAMED_GLASS_PANE,
+
+                CreateBlocks.ACACIA_GLASS_PANE,
+                CreateBlocks.ACACIA_GLASS,
+
+                CreateBlocks.OAK_GLASS,
+                CreateBlocks.OAK_GLASS_PANE,
+
+                CreateBlocks.DARK_OAK_GLASS,
+                CreateBlocks.DARK_OAK_GLASS_PANE,
+
+                CreateBlocks.FRAMED_GLASS_PANE,
+                CreateBlocks.FRAMED_GLASS,
+
+                CreateBlocks.SPRUCE_GLASS_PANE,
+                CreateBlocks.SPRUCE_GLASS,
+
+                CreateBlocks.BIRCH_GLASS_PANE,
+                CreateBlocks.BIRCH_GLASS,
+
+                CreateBlocks.IRON_GLASS_PANE,
+                CreateBlocks.IRON_GLASS,
+
+                CreateBlocks.JUNGLE_GLASS_PANE,
+                CreateBlocks.JUNGLE_GLASS
         );
+        BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout());
     }
 }

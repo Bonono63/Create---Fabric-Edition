@@ -16,12 +16,14 @@ public class Main implements ModInitializer {
 		return new Identifier(MOD_ID, name);
 	}
 
-	public static final ItemGroup GROUP = FabricItemGroupBuilder.build(id("group"), () -> new ItemStack(Items.BLUE_CARPET));
+	public static final ItemGroup GROUP = FabricItemGroupBuilder.build(id("group"), () -> new ItemStack(CreateItems.BELT_CONNECTOR));
 
 	@Override
 	public void onInitialize() {
+		//registry init
 		CreateItems.init();
 		CreateBlocks.init();
+
 		System.out.println("Hello Fabric world!");
 	}
 }

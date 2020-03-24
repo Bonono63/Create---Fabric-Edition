@@ -2,11 +2,14 @@ package net.MrBonono63.create.registry;
 
 import net.MrBonono63.create.items.GlintIngot;
 import net.minecraft.item.Item;
-import net.minecraft.item.Items;
 import net.minecraft.util.registry.Registry;
 import net.MrBonono63.create.Main;
 
 public class CreateItems {
+    /*
+    * Welcome to the Item Registry
+    * */
+
     //TODO setup custom tooltip system
 
     //nuggets
