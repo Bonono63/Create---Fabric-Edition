@@ -80,7 +80,7 @@ public class CreateItems {
 
 
     //blaze tools
-    public static final Item BLAZING_PICKAXE = register("blazing_pickaxe", new CreatePickaxeItem(ToolMaterials.GOLD, 1, -2.8f, newSettings()));
+    public static final Item BLAZING_PICKAXE = register("blazing_pickaxe", new CreatePickaxeItem(ToolMaterials.GOLD, 3, -2.8f, newSettings().maxDamage(450)));
     public static final Item BLAZING_SHOVEL = register("blazing_shovel", new Item(newSettings()));
     public static final Item BLAZING_AXE = register("blazing_axe", new Item(newSettings()));
     public static final Item BLAZING_SWORD = register("blazing_sword", new Item(newSettings()));
