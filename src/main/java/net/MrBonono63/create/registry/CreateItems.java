@@ -1,17 +1,25 @@
 package net.MrBonono63.create.registry;
 
+import net.MrBonono63.create.items.CreateAxeItem;
+import net.MrBonono63.create.items.CreateMattockItem;
 import net.MrBonono63.create.items.CreatePickaxeItem;
 import net.MrBonono63.create.items.GlintIngot;
-import net.minecraft.item.Item;
-import net.minecraft.item.PickaxeItem;
-import net.minecraft.item.ToolMaterials;
+import net.minecraft.item.*;
 import net.minecraft.util.registry.Registry;
 import net.MrBonono63.create.Main;
+
+import javax.tools.Tool;
 
 public class CreateItems {
     /*
     * Welcome to the Item Registry
     * */
+
+    /*
+    * LOGOSTICS
+    * TODO add everything
+    * */
+    public static final Item VERTICAL_GEARBOX = register("vertical_gearbox", new Item(newSettings()));
 
     //TODO setup custom tooltip system
 
@@ -81,20 +89,20 @@ public class CreateItems {
 
     //blaze tools
     public static final Item BLAZING_PICKAXE = register("blazing_pickaxe", new CreatePickaxeItem(ToolMaterials.GOLD, 3, -2.8f, newSettings().maxDamage(450)));
-    public static final Item BLAZING_SHOVEL = register("blazing_shovel", new Item(newSettings()));
-    public static final Item BLAZING_AXE = register("blazing_axe", new Item(newSettings()));
-    public static final Item BLAZING_SWORD = register("blazing_sword", new Item(newSettings()));
+    public static final Item BLAZING_SHOVEL = register("blazing_shovel", new ShovelItem(ToolMaterials.GOLD, 5,-3.0f, newSettings().maxDamage(450)));
+    public static final Item BLAZING_AXE = register("blazing_axe", new CreateAxeItem(ToolMaterials.GOLD, 7, -3.0f, newSettings().maxDamage(450)));
+    public static final Item BLAZING_SWORD = register("blazing_sword", new SwordItem(ToolMaterials.GOLD, 5, -2.4f, newSettings().maxDamage(450)));
 
     //rose quartz tools
-    public static final Item ROSE_QUARTZ_PICKAXE = register("rose_quartz_pickaxe", new Item(newSettings()));
-    public static final Item ROSE_QUARTZ_SHOVEL = register("rose_quartz_shovel", new Item(newSettings()));
-    public static final Item ROSE_QUARTZ_AXE = register("rose_quartz_axe", new Item(newSettings()));
-    public static final Item ROSE_QUARTZ_SWORD = register("rose_quartz_sword", new Item(newSettings()));
+    public static final Item ROSE_QUARTZ_PICKAXE = register("rose_quartz_pickaxe", new CreatePickaxeItem(ToolMaterials.IRON, 3, -2.8f, newSettings().maxDamage(1644)));
+    public static final Item ROSE_QUARTZ_SHOVEL = register("rose_quartz_shovel", new ShovelItem(ToolMaterials.GOLD, 3, -3.0f, newSettings().maxDamage(1644)));
+    public static final Item ROSE_QUARTZ_AXE = register("rose_quartz_axe", new CreateAxeItem(ToolMaterials.IRON, 7, -3.0f, newSettings().maxDamage(1644)));
+    public static final Item ROSE_QUARTZ_SWORD = register("rose_quartz_sword", new SwordItem(ToolMaterials.IRON, 5, -2.4f, newSettings().maxDamage(1644)));
 
     //shadow steel
-    public static final Item SHADOW_STEEL_PICKAXE = register("shadow_steel_pickaxe", new Item(newSettings()));
-    public static final Item SHADOW_STEEL_MATTOCK = register("shadow_steel_mattock", new Item(newSettings()));
-    public static final Item SHADOW_STEEL_SWORD = register("shadow_steel_sword", new Item(newSettings()));
+    public static final Item SHADOW_STEEL_PICKAXE = register("shadow_steel_pickaxe", new CreatePickaxeItem(ToolMaterials.DIAMOND, 6, -2.0f, newSettings().maxDamage(2303)));
+    public static final Item SHADOW_STEEL_MATTOCK = register("shadow_steel_mattock", new CreateMattockItem( 7, -1.5f, ToolMaterials.DIAMOND, newSettings().maxCount(2303)));
+    public static final Item SHADOW_STEEL_SWORD = register("shadow_steel_sword", new SwordItem(ToolMaterials.DIAMOND, 7, -2.0f, newSettings().maxDamage(2303)));
 
     private CreateItems() {
     }

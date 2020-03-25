@@ -29,7 +29,6 @@ public class CreateBlocks {
     * */
 
     public static final Block GEARBOX = register("gearbox", new Block(FabricBlockSettings.of(Material.WOOL).build()));
-    public static final Block VERTICAL_GEARBOX = register("vertical_gearbox", new Block(FabricBlockSettings.of(Material.WOOL).build()));
     public static final Block CART_ASSEMBLER = register("cart_assembler", new Block(FabricBlockSettings.copy(Blocks.STONE).build()));
 
     /*
