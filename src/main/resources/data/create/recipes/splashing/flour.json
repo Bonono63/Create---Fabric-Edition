@@ -1,0 +1,14 @@
+{
+    "type": "create:splashing",
+    "ingredients": [
+    	{
+    		"item": "create:flour"
+    	}
+    ], 
+	"results": [
+		{
+			"item": "create:dough",
+			"count": 1
+		}
+	]
+}

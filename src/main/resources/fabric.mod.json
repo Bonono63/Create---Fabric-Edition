@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "id": "modid",
+  "id": "create",
   "version": "${version}",
 
   "name": "Create - Fabric Edition",
@@ -10,7 +10,7 @@
   ],
   "contact": {
     "homepage": "",
-    "sources": ""
+    "sources": "https://github.com/Bonono63/Create---Fabric-Edition"
   },
 
   "license": "MIT License",
@@ -23,6 +23,9 @@
     ],
     "client": [
       "net.MrBonono63.create.ClientMain"
+    ],
+    "modmenu": [
+      "net.MrBonono63.create.compat.CreateModMenuIntegration"
     ]
   },
   "mixins": [
@@ -35,6 +38,7 @@
     "minecraft": ">=1.15.2"
   },
   "suggests": {
-    "modmenu": ">=1.10.2"
+    "modmenu": ">=1.10.2",
+    "roughlyenoughitems": ">=3.6.4"
   }
 }

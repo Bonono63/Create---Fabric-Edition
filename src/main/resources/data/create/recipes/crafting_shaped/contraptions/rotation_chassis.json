@@ -1,0 +1,26 @@
+{
+    "type": "crafting_shaped",
+        "pattern": [
+            " L ",
+            "PLP",
+			" L "
+        ],
+        "key": {
+			"L": {
+                "tag": "minecraft:logs"
+            },
+			"P": {
+                "item": "create:andesite_alloy"
+            }
+        },
+	"result": {
+		"item": "create:rotation_chassis",
+		"count": 3
+	},
+	"conditions": [
+		{
+			"type": "create:module",
+			"module": "contraptions"
+		}
+	]
+}

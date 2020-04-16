@@ -1,0 +1,28 @@
+{
+    "type": "crafting_shaped",
+        "pattern": [
+            " S ",
+            "GPG"
+        ],
+        "key": {
+            "S": {
+                "item": "minecraft:string"
+            },
+            "G": {
+                "tag": "minecraft:glass"
+            },
+            "P": {
+                "tag": "create:gold_sheet"
+            }
+        },
+	"result": {
+		"item": "create:goggles",
+		"count": 1
+	},
+	"conditions": [
+		{
+			"type": "create:module",
+			"module": "curiosities"
+		}
+	]
+}

@@ -1,0 +1,25 @@
+{
+    "type": "create:blockzapper_upgrade",
+        "pattern": [
+			"BR",
+            "E ",
+            "BR"
+        ],
+        "key": {
+            "B": {
+                "item": "create:chromatic_compound"
+            },
+			"R": {
+                "item": "create:refined_radiance"
+            },
+            "E": {
+                "item": "create:placement_handgun"
+            }
+        },
+	"result": {
+		"item": "create:placement_handgun",
+		"count": 1
+	},
+	"component": "Amplifier",
+	"tier": "Chromatic"
+}

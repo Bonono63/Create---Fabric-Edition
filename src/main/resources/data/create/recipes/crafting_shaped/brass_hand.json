@@ -1,0 +1,26 @@
+{
+    "type": "crafting_shaped",
+        "pattern": [
+            " A ",
+            "III",
+			" I "
+        ],
+        "key": {
+			"A": {
+                "item": "create:andesite_alloy"
+            },
+			"I": {
+                "item": "create:brass_sheet"
+            }
+        },
+	"result": {
+		"item": "create:brass_hand",
+		"count": 1
+	},
+	"conditions": [
+		{
+			"type": "create:module",
+			"module": "contraptions"
+		}
+	]
+}

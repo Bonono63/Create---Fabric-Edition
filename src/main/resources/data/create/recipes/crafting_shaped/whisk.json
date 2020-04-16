@@ -1,0 +1,26 @@
+{
+    "type": "crafting_shaped",
+        "pattern": [
+            " A ",
+            "IAI",
+			"III"
+        ],
+        "key": {
+			"A": {
+                "item": "create:andesite_alloy"
+            },
+			"I": {
+                "item": "create:iron_sheet"
+            }
+        },
+	"result": {
+		"item": "create:whisk",
+		"count": 1
+	},
+	"conditions": [
+		{
+			"type": "create:module",
+			"module": "contraptions"
+		}
+	]
+}

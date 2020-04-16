@@ -1,0 +1,25 @@
+{
+    "type": "crafting_shaped",
+        "pattern": [
+            "S",
+			"H"
+        ],
+        "key": {
+			"H": {
+                "item": "create:shaft"
+            },
+			"S": {
+                "tag": "minecraft:wooden_slabs"
+            }
+        },
+	"result": {
+		"item": "create:turntable",
+		"count": 1
+	},
+	"conditions": [
+		{
+			"type": "create:module",
+			"module": "contraptions"
+		}
+	]
+}

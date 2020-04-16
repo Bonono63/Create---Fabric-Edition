@@ -1,0 +1,26 @@
+{
+    "type": "crafting_shaped",
+        "pattern": [
+			"LLL",
+            "LWL",
+			"LLL"
+        ],
+        "key": {
+			"L": {
+                "item": "create:scoria"
+            },
+			"W": {
+                "item": "minecraft:black_dye"
+            }
+        },
+	"result": {
+		"item": "create:dark_scoria",
+		"count": 8
+	},
+	"conditions": [
+		{
+			"type": "create:module",
+			"module": "palettes"
+		}
+	]
+}

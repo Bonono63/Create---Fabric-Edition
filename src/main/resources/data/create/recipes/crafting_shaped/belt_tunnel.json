@@ -1,0 +1,28 @@
+{
+    "type": "crafting_shaped",
+        "pattern": [
+            "BBB",
+			"PAP"
+        ],
+        "key": {
+			"A": {
+                "item": "minecraft:dried_kelp"
+            },
+			"P": {
+                "item": "create:brass_sheet"
+            },
+			"B": {
+                "item": "create:brass_ingot"
+            }
+        },
+	"result": {
+		"item": "create:belt_tunnel",
+		"count": 4
+	},
+	"conditions": [
+		{
+			"type": "create:module",
+			"module": "logistics"
+		}
+	]
+}

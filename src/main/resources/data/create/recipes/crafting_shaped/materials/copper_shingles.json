@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "create:copper_sheet"
+    }
+  },
+  "result": {
+    "item": "create:copper_shingles",
+	"count": 8
+  }
+}

@@ -1,0 +1,32 @@
+{
+    "type": "crafting_shaped",
+        "pattern": [
+            " GE",
+            "LEG",
+            "OL "
+        ],
+        "key": {
+            "E": {
+                "item": "create:refined_radiance"
+            },
+			"L": {
+                "item": "create:brass_ingot"
+            },
+            "O": {
+                "item": "minecraft:obsidian"
+            },
+            "G": {
+                "item": "minecraft:white_stained_glass_pane"
+            }
+        },
+	"result": {
+		"item": "create:symmetry_wand",
+		"count": 1
+	},
+	"conditions": [
+		{
+			"type": "create:module",
+			"module": "curiosities"
+		}
+	]
+}

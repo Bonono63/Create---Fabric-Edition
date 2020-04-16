@@ -1,0 +1,29 @@
+{
+    "type": "crafting_shaped",
+        "pattern": [
+            "PP",
+            "PG",
+            " S"
+        ],
+        "key": {
+            "S": {
+                "item": "minecraft:stick"
+            },
+            "G": {
+                "item": "create:cogwheel"
+            },
+            "P": {
+                "item": "create:gold_sheet"
+            }
+        },
+	"result": {
+		"item": "create:wrench",
+		"count": 1
+	},
+	"conditions": [
+		{
+			"type": "create:module",
+			"module": "curiosities"
+		}
+	]
+}

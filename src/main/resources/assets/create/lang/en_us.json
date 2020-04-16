@@ -1166,5 +1166,12 @@
 	"item.create.logistical_dial.tooltip": "WIP",
 	"item.create.logistical_filter.tooltip": "WIP",
 
-	"itemGroup.create.group": "Create"
+	"_comment": "-----------------Fabric Only port---------------------",
+
+	"itemGroup.create.group": "Create",
+	"text.autoconfig.create.title": "Create Config",
+	"text.autoconfig.create.category.Server Configs": "Server Config",
+	"text.autoconfig.create.category.Client Configs": "Client Config",
+	"text.autoconfig.create.option.cocoaLogGrowthSpeed": "Cocoa Log Growth Speed: "
+
 }

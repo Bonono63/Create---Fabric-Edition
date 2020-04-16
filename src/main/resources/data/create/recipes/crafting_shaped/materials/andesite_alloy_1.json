@@ -1,0 +1,19 @@
+{
+    "type": "crafting_shaped",
+        "pattern": [
+            "SW",
+            "WS"
+        ],
+        "key": {
+            "W": {
+                "item": "minecraft:andesite"
+            },
+            "S": {
+                "item": "create:zinc_nugget"
+            }
+        },
+	"result": {
+		"item": "create:andesite_alloy",
+		"count": 1
+	}
+}

@@ -1,0 +1,31 @@
+{
+    "type": "crafting_shaped",
+	"pattern": [
+		"RCI",
+		" B "
+	],
+	"key": {
+		"R": {
+			"item": "minecraft:redstone"
+		},
+		"I": {
+			"item": "minecraft:iron_ingot"
+		},
+		"C": {
+			"item": "minecraft:comparator"
+		},
+		"B": {
+			"item": "create:brass_casing"
+		}
+	},
+	"result": {
+		"item": "create:stockswitch",
+		"count": 1
+	},
+	"conditions": [
+		{
+			"type": "create:module",
+			"module": "logistics"
+		}
+	]
+}

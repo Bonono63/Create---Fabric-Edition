@@ -1,0 +1,25 @@
+{
+    "type": "crafting_shaped",
+        "pattern": [
+			"WL",
+            "LW"
+        ],
+        "key": {
+			"L": {
+                "item": "minecraft:sand"
+            },
+			"W": {
+                "item": "minecraft:diorite"
+            }
+        },
+	"result": {
+		"item": "create:limesand",
+		"count": 4
+	},
+	"conditions": [
+		{
+			"type": "create:module",
+			"module": "palettes"
+		}
+	]
+}

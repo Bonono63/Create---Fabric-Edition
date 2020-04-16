@@ -1,0 +1,26 @@
+{
+    "type": "crafting_shaped",
+        "pattern": [
+			"LLL",
+            "LWL",
+			"LLL"
+        ],
+        "key": {
+			"L": {
+                "item": "minecraft:glass"
+            },
+			"W": {
+                "item": "minecraft:birch_planks"
+            }
+        },
+	"result": {
+		"item": "create:birch_glass",
+		"count": 8
+	},
+	"conditions": [
+		{
+			"type": "create:module",
+			"module": "palettes"
+		}
+	]
+}

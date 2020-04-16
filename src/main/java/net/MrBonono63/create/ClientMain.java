@@ -41,8 +41,15 @@ public class ClientMain implements ClientModInitializer {
                 CreateBlocks.IRON_GLASS,
 
                 CreateBlocks.JUNGLE_GLASS_PANE,
-                CreateBlocks.JUNGLE_GLASS
+                CreateBlocks.JUNGLE_GLASS,
+
+                CreateBlocks.ROPE,
+                CreateBlocks.PULLEY_MAGNET,
+
+                CreateBlocks.TURNTABLE
         );
-        BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(),
+                CreateBlocks.CREATIVE_CRATE
+        );
     }
 }
