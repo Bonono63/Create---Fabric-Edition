@@ -33,6 +33,11 @@ public class OxidizingBlock extends Block {
         super.appendProperties(builder.add(OXIDIZATION));
     }
 
+    @Override
+    public boolean hasRandomTicks(BlockState state) {
+        return true;
+    }
+
     public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
         if (world.getRandom().nextFloat() <= chance)
         {
@@ -45,12 +50,6 @@ public class OxidizingBlock extends Block {
                 if (world.isAir(neighborPos))
                     continue;
                 BlockState neighborState = world.getBlockState(neighborPos);
-                if (neighborState.get(OXIDIZATION) != 0)
-                {
-                    neighbors.add(neighborState.get(OXIDIZATION));
-                }
-                if (Block.isSideSolidFullSquare(neighborState,world,neighborPos,facing.getOpposite()))
-                    continue;
                 canIncrease = true;
             }
             if (canIncrease)

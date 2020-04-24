@@ -1,5 +1,4 @@
 {
-	"forgemarker": 1,
 	"defaults": {
 		"model": "create:block/schematic_table"
 	},

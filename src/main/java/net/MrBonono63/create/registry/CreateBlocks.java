@@ -1,14 +1,15 @@
 package net.MrBonono63.create.registry;
 
+import me.sargunvohra.mcmods.autoconfig1u.AutoConfig;
 import net.MrBonono63.create.Main;
-import net.MrBonono63.create.blocks.contraptions.BasinBlock;
-import net.MrBonono63.create.blocks.contraptions.MagnetPulleyBlock;
-import net.MrBonono63.create.blocks.contraptions.RopeBlock;
-import net.MrBonono63.create.blocks.contraptions.Turntable;
+import net.MrBonono63.create.blocks.contraptions.*;
 import net.MrBonono63.create.blocks.gardens.CocoaLogBlock;
+import net.MrBonono63.create.blocks.logistics.RedstoneBridgeBlock;
 import net.MrBonono63.create.blocks.palettes.*;
 import net.MrBonono63.create.blocks.schematics.CreativeCrateBlock;
+import net.MrBonono63.create.blocks.schematics.SchematicTable;
 import net.MrBonono63.create.blocks.schematics.Schematicannon;
+import net.MrBonono63.create.config.CreateConfig;
 import net.fabricmc.fabric.api.block.FabricBlockSettings;
 import net.minecraft.block.*;
 import net.minecraft.item.BlockItem;
@@ -29,7 +30,7 @@ public class CreateBlocks {
      *  */
     public static final Block SCHEMATICANNON = register("schematicannon", new Schematicannon(FabricBlockSettings.of(Material.WOOL).nonOpaque().build()));
     public static final Block CREATIVE_CRATE = register("creative_crate", new CreativeCrateBlock(FabricBlockSettings.of(Material.WOOL).nonOpaque().build()));
-    public static final Block SCHEMATIC_TABLE = register("schematic_table", new Block(FabricBlockSettings.of(Material.WOOL).nonOpaque().build()));
+    public static final Block SCHEMATIC_TABLE = register("schematic_table", new SchematicTable(FabricBlockSettings.of(Material.WOOL).nonOpaque().build()));
 
     /*
     * CONTRAPTIONS
@@ -55,6 +56,7 @@ public class CreateBlocks {
     public static final Block CUCKOO_CLOCK = register("cuckoo_clock", new Block(FabricBlockSettings.copy(Blocks.STONE).build()));
     public static final Block MYSTERIOUS_CUCKOO_CLOCK = register("mysterious_cuckoo_clock", new Block(FabricBlockSettings.copy(Blocks.STONE).build()));
 
+    public static final Block MILLSTONE = register("millstone", new MillstoneBlock(FabricBlockSettings.copy(Blocks.STONE).build()));
     public static final Block CRUSHING_WHEEL = register("crushing_wheel", new Block(FabricBlockSettings.copy(Blocks.STONE).build()));
     public static final Block CRUSHING_WHEEL_CONTROLLER = register("crushing_wheel_controller", new Block(FabricBlockSettings.copy(Blocks.STONE).build()));
     public static final Block MECHANICAL_PRESS = register("mechanical_press", new Block(FabricBlockSettings.copy(Blocks.STONE).build()));
@@ -99,7 +101,7 @@ public class CreateBlocks {
     * TODO all all the blocks in this category and find out what block types need to be added
     * */
     public static final Block CONTACT = register("contact", new Block(FabricBlockSettings.copy(Blocks.STONE).build()));
-    public static final Block REDSTONE_BRIDGE = register("redstone_bridge", new Block(FabricBlockSettings.copy(Blocks.STONE).build()));
+    public static final Block REDSTONE_BRIDGE = register("redstone_bridge", new RedstoneBridgeBlock(FabricBlockSettings.copy(Blocks.STONE).build()));
     public static final Block STOCKSWITCH = register("stockswitch", new Block(FabricBlockSettings.copy(Blocks.STONE).build()));
     public static final Block FLEXCRATE = register("flexcrate", new Block(FabricBlockSettings.copy(Blocks.STONE).build()));
     public static final Block EXTRACTOR = register("extractor", new Block(FabricBlockSettings.copy(Blocks.STONE).build()));
@@ -266,9 +268,9 @@ public class CreateBlocks {
     public static final Block ZINC_ORE = register("zinc_ore", new Block(FabricBlockSettings.copy(Blocks.GOLD_ORE).strength(3f, 2f).build()));
     public static final Block ZINC_BLOCK = register("zinc_block", new Block(FabricBlockSettings.copy(Blocks.IRON_BLOCK).build()));
     public static final Block BRASS_BLOCK = register("brass_block", new Block(FabricBlockSettings.copy(Blocks.IRON_BLOCK).build()));
-    public static final Block COPPER_ORE = register("copper_ore", new OxidizingBlock(FabricBlockSettings.copy(Blocks.IRON_ORE).build(), 1));
-    public static final Block COPPER_BLOCK = register("copper_block", new OxidizingBlock(FabricBlockSettings.copy(Blocks.IRON_ORE).build(), 1/32f));
-    public static final Block COPPER_SHINGLES = register("copper_shingles", new OxidizingBlock(FabricBlockSettings.copy(Blocks.IRON_ORE).build(), 1/32f));
+    public static final Block COPPER_ORE = register("copper_ore", new OxidizingBlock(FabricBlockSettings.copy(Blocks.IRON_ORE).build(), CreateConfig.copperOreOxidizingRate));
+    public static final Block COPPER_BLOCK = register("copper_block", new OxidizingBlock(FabricBlockSettings.copy(Blocks.IRON_ORE).build(), CreateConfig.copperBlockOxidizingRate));
+    public static final Block COPPER_SHINGLES = register("copper_shingles", new OxidizingBlock(FabricBlockSettings.copy(Blocks.IRON_ORE).build(), CreateConfig.copperShinglesOxidizingRate));
 
     private CreateBlocks() {
     }
