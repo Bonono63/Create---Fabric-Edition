@@ -27,7 +27,7 @@ public class Main implements ModInitializer {
 	@Override
 	public void onInitialize() {
 
-		AutoConfig.register(CreateConfig.class, JanksonConfigSerializer::new);
+		//AutoConfig.register(CreateConfig.class, JanksonConfigSerializer::new);
 
 		CreateItems.init();
 		CreateBlocks.init();

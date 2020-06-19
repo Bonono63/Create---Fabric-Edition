@@ -20,6 +20,7 @@ public class OxidizingBlock extends Block {
     public OxidizingBlock(Settings settings, float chance) {
         super(settings);
         this.chance = chance;
+        this.setHardness(getDefaultState());
         this.setDefaultState(this.stateManager.getDefaultState().with(OXIDIZATION, 0));
     }
 
@@ -71,10 +72,7 @@ public class OxidizingBlock extends Block {
         return hardness;
     }
 
-    @Override
-    public float getHardness(BlockState state, BlockView world, BlockPos pos) {
-        return setHardness(state);
-    }
+
 
     static
     {

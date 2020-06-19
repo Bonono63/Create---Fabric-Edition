@@ -18,7 +18,6 @@ public class CreateModMenuIntegration implements ModMenuApi {
         return Main.MOD_ID;
     }
 
-    @Override
     public Optional<Supplier<Screen>> getConfigScreen(Screen screen) {
         return Optional.of(AutoConfig.getConfigScreen(CreateConfig.class, screen));
     }

@@ -1,7 +1,6 @@
 package net.MrBonono63.create.blocks.logistics;
 
 import net.minecraft.block.*;
-import net.minecraft.entity.EntityContext;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.Properties;
@@ -28,7 +27,7 @@ public class FlexPeater extends AbstractRedstoneGateBlock {
     }
 
     @Override
-    public VoxelShape getOutlineShape(BlockState state, BlockView view, BlockPos pos, EntityContext context) {
+    public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
         return SHAPE;
     }
 

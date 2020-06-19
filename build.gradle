@@ -53,8 +53,8 @@ dependencies {
 	modCompile ("me.shedaniel:RoughlyEnoughItems:${project.rei_version}") { exclude(module: "ModMenu") }
 	modImplementation ("me.shedaniel:RoughlyEnoughItems:${project.rei_version}") { exclude(module: "ModMenu") }
 
-	modImplementation ("io.github.cottonmc.cotton:cotton:${project.cotton_version}") { exclude(module: "ModMenu") }
-	include ("io.github.cottonmc.cotton:cotton:${project.cotton_version}") { exclude(module: "ModMenu") }
+	//modImplementation ("io.github.cottonmc.cotton:cotton:${project.cotton_version}") { exclude(module: "ModMenu") }
+	//include ("io.github.cottonmc.cotton:cotton:${project.cotton_version}") { exclude(module: "ModMenu") }
 
 	modCompile "me.sargunvohra.mcmods:autoconfig1u:v2"
 	include "me.sargunvohra.mcmods:autoconfig1u:v2"

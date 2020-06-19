@@ -19,7 +19,7 @@ public class CocoaLogBlock extends PillarBlock implements Fertilizable {
     //local cocoa age property min 0 max 2
     public static IntProperty AGE;
 
-    CreateConfig config = AutoConfig.getConfigHolder(CreateConfig.class).getConfig();
+    //CreateConfig config = AutoConfig.getConfigHolder(CreateConfig.class).getConfig();
 
     public CocoaLogBlock(Settings settings) {
         super(settings);
@@ -70,7 +70,7 @@ public class CocoaLogBlock extends PillarBlock implements Fertilizable {
 
     //don't override otherwise the game won't tick it
     public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
-        if (random.nextInt() > config.cocoaLogGrowthSpeed / 100d && !isMature(state))
+        if (random.nextInt() > 20 / 100d && !isMature(state))
         {
             world.setBlockState(pos, state.with(AGE, getAge(state) + 1), 2);
         }

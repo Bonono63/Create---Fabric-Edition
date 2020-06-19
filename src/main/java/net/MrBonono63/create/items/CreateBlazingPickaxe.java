@@ -17,16 +17,15 @@ public class CreateBlazingPickaxe extends PickaxeItem {
 
     @Override
     public boolean postMine(ItemStack stack, World worldIn, BlockState state, BlockPos pos, LivingEntity miner) {
-        return shouldTakeDamage(worldIn, stack) ? super.postMine(stack, worldIn, state, pos, miner)
-                : true;
+        return !shouldTakeDamage(worldIn, stack) || super.postMine(stack, worldIn, state, pos, miner);
     }
 
     protected boolean shouldTakeDamage(World world, ItemStack stack) {
-        return world.getDimension().getType() != DimensionType.THE_END;
+        return true;
     }
 
     public boolean postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {
         target.setOnFireFor(2);
-        return shouldTakeDamage(attacker.world, stack) ? super.postHit(stack, target, attacker) : true;
+        return !shouldTakeDamage(attacker.world, stack) || super.postHit(stack, target, attacker);
     }
 }

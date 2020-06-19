@@ -1,9 +1,9 @@
 package net.MrBonono63.create.config;
 
-import blue.endless.jankson.Comment;
 import me.sargunvohra.mcmods.autoconfig1u.ConfigData;
 import me.sargunvohra.mcmods.autoconfig1u.annotation.Config;
 import me.sargunvohra.mcmods.autoconfig1u.annotation.ConfigEntry;
+import me.sargunvohra.mcmods.autoconfig1u.shadowed.blue.endless.jankson.Comment;
 
 /*
 Loosely based on Exotic Blocks and the wiki for autoconfig
