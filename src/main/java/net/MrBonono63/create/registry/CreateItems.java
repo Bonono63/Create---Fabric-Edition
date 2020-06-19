@@ -66,7 +66,7 @@ public class CreateItems {
     * TODO add functionality
     * */
     public static final Item BELT_CONNECTOR = register("belt_connector", new Item(newSettings()));
-    public static final Item VERTICAL_GEARBOX = register("vertical_gearbox", new Item(newSettings()));
+    public static final Item VERTICAL_GEARBOX = register("vertical_gearbox", new VerticalGearBox(newSettings()));
     public static final Item FLOUR = register("flour", new Item(newSettings()));
     public static final Item DOUGH = register("dough", new Item(newSettings()));
     public static final Item PROPELLER = register("propeller", new Item(newSettings()));

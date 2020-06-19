@@ -1,6 +1,5 @@
 package net.MrBonono63.create.compat;
 
-import io.github.prospector.modmenu.api.ConfigScreenFactory;
 import io.github.prospector.modmenu.api.ModMenuApi;
 import me.sargunvohra.mcmods.autoconfig1u.AutoConfig;
 import net.MrBonono63.create.Main;

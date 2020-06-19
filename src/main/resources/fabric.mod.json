@@ -9,8 +9,9 @@
     "MrBonono63 [Curse]"
   ],
   "contact": {
-    "homepage": "",
-    "sources": "https://github.com/Bonono63/Create---Fabric-Edition"
+    "homepage": "https://www.curseforge.com/minecraft/mc-mods/create-fabric-edition",
+    "sources": "https://github.com/Bonono63/Create---Fabric-Edition",
+    "issues": "https://github.com/Bonono63/Create---Fabric-Edition/issues"
   },
 
   "license": "MIT License",

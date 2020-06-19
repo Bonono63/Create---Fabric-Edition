@@ -1,10 +1,9 @@
 package net.MrBonono63.create.registry;
 
-import me.sargunvohra.mcmods.autoconfig1u.AutoConfig;
 import net.MrBonono63.create.Main;
 import net.MrBonono63.create.blocks.contraptions.*;
 import net.MrBonono63.create.blocks.gardens.CocoaLogBlock;
-import net.MrBonono63.create.blocks.logistics.RedstoneBridgeBlock;
+import net.MrBonono63.create.blocks.logistics.*;
 import net.MrBonono63.create.blocks.palettes.*;
 import net.MrBonono63.create.blocks.schematics.CreativeCrateBlock;
 import net.MrBonono63.create.blocks.schematics.SchematicTable;
@@ -14,7 +13,6 @@ import net.fabricmc.fabric.api.block.FabricBlockSettings;
 import net.minecraft.block.*;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
-import net.minecraft.tag.ItemTags;
 import net.minecraft.util.registry.Registry;
 
 import java.util.function.Function;
@@ -36,31 +34,31 @@ public class CreateBlocks {
     * CONTRAPTIONS
     * TODO add block types and systems
     * */
-    public static final Block SHAFT = register("shaft", new Block(FabricBlockSettings.copy(Blocks.ANDESITE).build()));
-    public static final Block COGWHEEL = register("cogwheel", new Block(FabricBlockSettings.copy(Blocks.STONE).build()));
-    public static final Block LARGE_COGWHEEL = register("large_cogwheel", new Block(FabricBlockSettings.copy(Blocks.STONE).build()));
-    public static final Block ENCASED_SHAFT = register("encased_shaft", new Block(FabricBlockSettings.copy(Blocks.STONE).build()));
-    public static final Block GEARBOX = register("gearbox", new Block(FabricBlockSettings.of(Material.WOOL).build()));
+    public static final Block SHAFT = register("shaft", new shaftBlock(FabricBlockSettings.copy(Blocks.ANDESITE).build()));
+    public static final Block COGWHEEL = register("cogwheel", new CogwheelBlock(FabricBlockSettings.copy(Blocks.STONE).build()));
+    public static final Block LARGE_COGWHEEL = register("large_cogwheel", new LargeCogWheelBlock(FabricBlockSettings.copy(Blocks.STONE).build()));
+    public static final Block ENCASED_SHAFT = register("encased_shaft", new EncasedShaftBlock(FabricBlockSettings.copy(Blocks.STONE).build()));
+    public static final Block GEARBOX = register("gearbox", new GearBoxBlock(FabricBlockSettings.of(Material.WOOL).build()));
 
-    public static final Block CLUTCH = register("clutch", new Block(FabricBlockSettings.copy(Blocks.STONE).build()));
-    public static final Block GEARSHIFT = register("gearshift", new Block(FabricBlockSettings.copy(Blocks.STONE).build()));
+    public static final Block CLUTCH = register("clutch", new ClutchBlock(FabricBlockSettings.copy(Blocks.STONE).build()));
+    public static final Block GEARSHIFT = register("gearshift", new GearShiftBlock(FabricBlockSettings.copy(Blocks.STONE).build()));
     public static final Block ENCASED_BELT = register("encased_belt", new Block(FabricBlockSettings.copy(Blocks.STONE).build()));
     public static final Block ADJUSTABLE_PULLEY = register("adjustable_pulley", new Block(FabricBlockSettings.copy(Blocks.STONE).build()));
     public static final Block BELT = register("belt", new Block(FabricBlockSettings.copy(Blocks.STONE).build()));
-    public static final Block CREATIVE_MOTOR = register("creative_motor", new Block(FabricBlockSettings.copy(Blocks.STONE).build()));
-    public static final Block WATER_WHEEL = register("water_wheel", new Block(FabricBlockSettings.copy(Blocks.STONE).build()));
-    public static final Block ENCASED_FAN = register("encased_fan", new Block(FabricBlockSettings.copy(Blocks.STONE).build()));
-    public static final Block NOZZLE = register("nozzle", new Block(FabricBlockSettings.copy(Blocks.STONE).build()));
+    public static final Block CREATIVE_MOTOR = register("creative_motor", new CreativeMotorBlock(FabricBlockSettings.copy(Blocks.STONE).build()));
+    public static final Block WATER_WHEEL = register("water_wheel", new WaterWheelBlock(FabricBlockSettings.copy(Blocks.STONE).build()));
+    public static final Block ENCASED_FAN = register("encased_fan", new EncasedFanBlock(FabricBlockSettings.copy(Blocks.STONE).build()));
+    public static final Block NOZZLE = register("nozzle", new NozzleBlock(FabricBlockSettings.copy(Blocks.STONE).build()));
     public static final Block TURNTABLE = register("turntable", new Turntable(FabricBlockSettings.copy(Blocks.STONE).nonOpaque().build()));
-    public static final Block HAND_CRANK = register("hand_crank", new Block(FabricBlockSettings.copy(Blocks.STONE).build()));
-    public static final Block CUCKOO_CLOCK = register("cuckoo_clock", new Block(FabricBlockSettings.copy(Blocks.STONE).build()));
-    public static final Block MYSTERIOUS_CUCKOO_CLOCK = register("mysterious_cuckoo_clock", new Block(FabricBlockSettings.copy(Blocks.STONE).build()));
+    public static final Block HAND_CRANK = register("hand_crank", new HandCrankBlock(FabricBlockSettings.copy(Blocks.STONE).build()));
+    public static final Block CUCKOO_CLOCK = register("cuckoo_clock", new CuckooClockBlock(FabricBlockSettings.copy(Blocks.STONE).build()));
+    public static final Block MYSTERIOUS_CUCKOO_CLOCK = register("mysterious_cuckoo_clock", new MysteriousCuckooClock(FabricBlockSettings.copy(Blocks.STONE).build()));
 
     public static final Block MILLSTONE = register("millstone", new MillstoneBlock(FabricBlockSettings.copy(Blocks.STONE).build()));
-    public static final Block CRUSHING_WHEEL = register("crushing_wheel", new Block(FabricBlockSettings.copy(Blocks.STONE).build()));
-    public static final Block CRUSHING_WHEEL_CONTROLLER = register("crushing_wheel_controller", new Block(FabricBlockSettings.copy(Blocks.STONE).build()));
-    public static final Block MECHANICAL_PRESS = register("mechanical_press", new Block(FabricBlockSettings.copy(Blocks.STONE).build()));
-    public static final Block MECHANICAL_MIXER = register("mechanical_mixer", new Block(FabricBlockSettings.copy(Blocks.STONE).build()));
+    public static final Block CRUSHING_WHEEL = register("crushing_wheel", new CrushingWheelBlock(FabricBlockSettings.copy(Blocks.STONE).build()));
+    public static final Block CRUSHING_WHEEL_CONTROLLER = register("crushing_wheel_controller", new CrushingWheelController(FabricBlockSettings.copy(Blocks.STONE).build()));
+    public static final Block MECHANICAL_PRESS = register("mechanical_press", new MechanicalPress(FabricBlockSettings.copy(Blocks.STONE).build()));
+    public static final Block MECHANICAL_MIXER = register("mechanical_mixer", new MechanicalMixerBlock(FabricBlockSettings.copy(Blocks.STONE).build()));
     public static final Block BASIN = register("basin", new BasinBlock(FabricBlockSettings.copy(Blocks.STONE).nonOpaque().build()));
     public static final Block SPEED_GAUGE = register("speed_gauge", new Block(FabricBlockSettings.copy(Blocks.STONE).build()));
     public static final Block STRESS_GAUGE = register("stress_gauge", new Block(FabricBlockSettings.copy(Blocks.STONE).build()));
@@ -68,7 +66,7 @@ public class CreateBlocks {
     public static final Block MECHANICAL_PISTON = register("mechanical_piston", new Block(FabricBlockSettings.copy(Blocks.STONE).build()));
     public static final Block STICKY_MECHANICAL_PISTON = register("sticky_mechanical_piston", new Block(FabricBlockSettings.copy(Blocks.STONE).build()));
     public static final Block MECHANICAL_PISTON_HEAD = register("mechanical_piston_head", new Block(FabricBlockSettings.copy(Blocks.STONE).build()));
-    public static final Block PISTON_POLE = register("piston_pole", new Block(FabricBlockSettings.copy(Blocks.STONE).build()));
+    public static final Block PISTON_POLE = register("piston_pole", new PistonPoleBlock(FabricBlockSettings.copy(Blocks.STONE).build()));
     public static final Block MECHANICAL_BEARING = register("mechanical_bearing", new Block(FabricBlockSettings.copy(Blocks.STONE).build()));
     public static final Block CLOCKWORK_BEARING = register("clockwork_bearing", new Block(FabricBlockSettings.copy(Blocks.STONE).build()));
     public static final Block ROPE_PULLEY = register("rope_pulley", new Block(FabricBlockSettings.copy(Blocks.STONE).build()));
@@ -76,8 +74,8 @@ public class CreateBlocks {
     public static final Block PULLEY_MAGNET = register("pulley_magnet", new MagnetPulleyBlock(FabricBlockSettings.copy(Blocks.STONE).build()));
     public static final Block CART_ASSEMBLER = register("cart_assembler", new Block(FabricBlockSettings.copy(Blocks.STONE).build()));
     public static final Block MINECART_ANCHOR = register("minecart_anchor", new Block(FabricBlockSettings.copy(Blocks.STONE).build()));
-    public static final Block TRANSLATION_CHASSIS = register("translation_chassis", new Block(FabricBlockSettings.copy(Blocks.STONE).build()));
-    public static final Block TRANSLATION_CHASSIS_SECONDARY = register("translation_chassis_secondary", new Block(FabricBlockSettings.copy(Blocks.STONE).build()));
+    public static final Block TRANSLATION_CHASSIS = register("translation_chassis", new TranslationChassis(FabricBlockSettings.copy(Blocks.STONE).build()));
+    public static final Block TRANSLATION_CHASSIS_SECONDARY = register("translation_chassis_secondary", new TranslationChassis(FabricBlockSettings.copy(Blocks.STONE).build()));
     public static final Block ROTATION_CHASSIS = register("rotation_chassis", new Block(FabricBlockSettings.copy(Blocks.STONE).build()));
     public static final Block DRILL = register("drill", new Block(FabricBlockSettings.copy(Blocks.STONE).build()));
     public static final Block SAW = register("saw", new Block(FabricBlockSettings.copy(Blocks.STONE).build()));
@@ -116,11 +114,11 @@ public class CreateBlocks {
     public static final Block VERTICAL_FUNNEL = register("vertical_funnel", new Block(FabricBlockSettings.copy(Blocks.STONE).build()));
     public static final Block BELT_TUNNEL = register("belt_tunnel", new Block(FabricBlockSettings.copy(Blocks.STONE).build()));
     public static final Block ENTITY_DETECTOR = register("entity_detector", new Block(FabricBlockSettings.copy(Blocks.STONE).build()));
-    public static final Block PULSE_REPEATER = register("pulse_repeater", new Block(FabricBlockSettings.copy(Blocks.STONE).build()));
-    public static final Block FLEXPEATER = register("flexpeater", new Block(FabricBlockSettings.copy(Blocks.STONE).build()));
-    public static final Block FLEXPULSEPEATER = register("flexpulsepeater", new Block(FabricBlockSettings.copy(Blocks.STONE).build()));
-    public static final Block REDSTONE_LATCH = register("redstone_latch", new Block(FabricBlockSettings.copy(Blocks.STONE).build()));
-    public static final Block TOGGLE_LATCH = register("toggle_latch", new Block(FabricBlockSettings.copy(Blocks.STONE).build()));
+    public static final Block PULSE_REPEATER = register("pulse_repeater", new PulseRepeater(FabricBlockSettings.copy(Blocks.STONE).build()));
+    public static final Block FLEXPEATER = register("flexpeater", new FlexPeater(FabricBlockSettings.copy(Blocks.STONE).build()));
+    public static final Block FLEXPULSEPEATER = register("flexpulsepeater", new FlexPulsePeater(FabricBlockSettings.copy(Blocks.STONE).build()));
+    public static final Block REDSTONE_LATCH = register("redstone_latch", new RedstoneLatch(FabricBlockSettings.copy(Blocks.STONE).build()));
+    public static final Block TOGGLE_LATCH = register("toggle_latch", new ToggleLatch(FabricBlockSettings.copy(Blocks.STONE).build()));
 
     /*
     * CURIOSITIES
@@ -202,7 +200,7 @@ public class CreateBlocks {
     public static final Block DOLOMITE_LAYERS = register("dolomite_layers", new Block(FabricBlockSettings.copy(DOLOMITE).build()));
 
     //LIMESTONE
-    public static final Block LIMESAND = register("limesand", new FallingBlock(FabricBlockSettings.copy(Blocks.SAND).build()));
+    public static final Block LIME_SAND = register("lime_sand", new FallingBlock(FabricBlockSettings.copy(Blocks.SAND).build()));
     public static final Block LIMESTONE = register("limestone", new Block(FabricBlockSettings.copy(Blocks.SANDSTONE).build()));
     public static final Block LIMESTONE_SLAB = register("limestone_slab", new CreateSlabBlock(FabricBlockSettings.copy(LIMESTONE).build()));
     public static final Block LIMESTONE_WALL = register("limestone_wall", new WallBlock(FabricBlockSettings.copy(LIMESTONE).build()));
@@ -291,6 +289,22 @@ public class CreateBlocks {
     }
 
     static <T extends Block> T register(String name, T block, BlockItem item) {
+        T b = Registry.register(Registry.BLOCK, Main.id(name), block);
+        if (item != null) {
+            CreateItems.register(name, item);
+        }
+        return b;
+    }
+
+    static <T extends Block> T Wregister(String name, T block, Item.Settings settings) {
+        return register(name, block, new BlockItem(block, settings));
+    }
+
+    static <T extends Block> T Wregister(String name, T block) {
+        return register(name, block, new Item.Settings());
+    }
+
+    static <T extends Block> T Wregister(String name, T block, BlockItem item) {
         T b = Registry.register(Registry.BLOCK, Main.id(name), block);
         if (item != null) {
             CreateItems.register(name, item);

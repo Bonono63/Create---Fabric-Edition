@@ -46,10 +46,31 @@ public class ClientMain implements ClientModInitializer {
                 CreateBlocks.ROPE,
                 CreateBlocks.PULLEY_MAGNET,
 
-                CreateBlocks.TURNTABLE
+                CreateBlocks.TURNTABLE,
+                CreateBlocks.SHAFT,
+                CreateBlocks.COGWHEEL,
+                CreateBlocks.LARGE_COGWHEEL,
+                CreateBlocks.GEARBOX,
+                CreateBlocks.CREATIVE_MOTOR,
+                CreateBlocks.NOZZLE
         );
         BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(),
-                CreateBlocks.CREATIVE_CRATE
+                CreateBlocks.CREATIVE_CRATE,
+
+                CreateBlocks.ENCASED_FAN,
+                CreateBlocks.WATER_WHEEL,
+                CreateBlocks.CRUSHING_WHEEL,
+                CreateBlocks.HAND_CRANK,
+                CreateBlocks.MECHANICAL_MIXER,
+                CreateBlocks.MECHANICAL_PISTON,
+
+                CreateBlocks.REDSTONE_BRIDGE,
+
+                CreateBlocks.PULSE_REPEATER,
+                CreateBlocks.FLEXPULSEPEATER,
+                CreateBlocks.REDSTONE_LATCH,
+                CreateBlocks.TOGGLE_LATCH,
+                CreateBlocks.FLEXPEATER
         );
     }
 }
