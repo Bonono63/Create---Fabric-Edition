@@ -1,23 +1,23 @@
 {
 	"variants": {
-		"facing=north, powering=true, powered_side=true": { "model": "create:block/repeaters/redstone_latch_powered", "y": 180 },
-		"facing=east, powering=true, powered_side=true": { "model": "create:block/repeaters/redstone_latch_powered", "y": 270 },
-		"facing=south, powering=true, powered_side=true": { "model": "create:block/repeaters/redstone_latch_powered", "y": 0 },
-		"facing=west, powering=true, powered_side=true": { "model": "create:block/repeaters/redstone_latch_powered", "y": 90 },
+		"powered=true, facing=north, powering=true, powered_side=true": { "model": "create:block/repeaters/redstone_latch_powered", "y": 180 },
+		"powered=true, facing=east, powering=true, powered_side=true": { "model": "create:block/repeaters/redstone_latch_powered", "y": 270 },
+		"powered=true, facing=south, powering=true, powered_side=true": { "model": "create:block/repeaters/redstone_latch_powered", "y": 0 },
+		"powered=true, facing=west, powering=true, powered_side=true": { "model": "create:block/repeaters/redstone_latch_powered", "y": 90 },
 
-		"facing=north, powering=false, powered_side=true": { "model": "create:block/repeaters/redstone_latch", "y": 180 },
-		"facing=east, powering=false, powered_side=true": { "model": "create:block/repeaters/redstone_latch", "y": 270 },
-		"facing=south, powering=false, powered_side=true": { "model": "create:block/repeaters/redstone_latch", "y": 0 },
-		"facing=west, powering=false, powered_side=true": { "model": "create:block/repeaters/redstone_latch", "y": 90 },
+		"powered=false, facing=north, powering=false, powered_side=true": { "model": "create:block/repeaters/redstone_latch", "y": 180 },
+		"powered=false, facing=east, powering=false, powered_side=true": { "model": "create:block/repeaters/redstone_latch", "y": 270 },
+		"powered=false, facing=south, powering=false, powered_side=true": { "model": "create:block/repeaters/redstone_latch", "y": 0 },
+		"powered=false, facing=west, powering=false, powered_side=true": { "model": "create:block/repeaters/redstone_latch", "y": 90 },
 
-		"facing=north, powering=true, powered_side=false": { "model": "create:block/repeaters/redstone_latch_powered", "y": 180 },
-		"facing=east, powering=true, powered_side=false": { "model": "create:block/repeaters/redstone_latch_powered", "y": 270 },
-		"facing=south, powering=true, powered_side=false": { "model": "create:block/repeaters/redstone_latch_powered", "y": 0 },
-		"facing=west, powering=true, powered_side=false": { "model": "create:block/repeaters/redstone_latch_powered", "y": 90 },
+		"powered=true, facing=north, powering=true, powered_side=false": { "model": "create:block/repeaters/redstone_latch_powered", "y": 180 },
+		"powered=true, facing=east, powering=true, powered_side=false": { "model": "create:block/repeaters/redstone_latch_powered", "y": 270 },
+		"powered=true, facing=south, powering=true, powered_side=false": { "model": "create:block/repeaters/redstone_latch_powered", "y": 0 },
+		"powered=true, facing=west, powering=true, powered_side=false": { "model": "create:block/repeaters/redstone_latch_powered", "y": 90 },
 
-		"facing=north, powering=false, powered_side=false": { "model": "create:block/repeaters/redstone_latch", "y": 180 },
-		"facing=east, powering=false, powered_side=false": { "model": "create:block/repeaters/redstone_latch", "y": 270 },
-		"facing=south, powering=false, powered_side=false": { "model": "create:block/repeaters/redstone_latch", "y": 0 },
-		"facing=west, powering=false, powered_side=false": { "model": "create:block/repeaters/redstone_latch", "y": 90 }
+		"powered=false, facing=north, powering=false, powered_side=false": { "model": "create:block/repeaters/redstone_latch", "y": 180 },
+		"powered=false, facing=east, powering=false, powered_side=false": { "model": "create:block/repeaters/redstone_latch", "y": 270 },
+		"powered=false, facing=south, powering=false, powered_side=false": { "model": "create:block/repeaters/redstone_latch", "y": 0 },
+		"powered=false, facing=west, powering=false, powered_side=false": { "model": "create:block/repeaters/redstone_latch", "y": 90 }
 	}
 }

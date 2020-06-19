@@ -69,7 +69,7 @@ public class CreateBlocks {
     public static final Block PISTON_POLE = register("piston_pole", new PistonPoleBlock(FabricBlockSettings.copy(Blocks.STONE).build()));
     public static final Block MECHANICAL_BEARING = register("mechanical_bearing", new Block(FabricBlockSettings.copy(Blocks.STONE).build()));
     public static final Block CLOCKWORK_BEARING = register("clockwork_bearing", new Block(FabricBlockSettings.copy(Blocks.STONE).build()));
-    public static final Block ROPE_PULLEY = register("rope_pulley", new Block(FabricBlockSettings.copy(Blocks.STONE).build()));
+    public static final Block ROPE_PULLEY = register("rope_pulley", new RopePulley(FabricBlockSettings.copy(Blocks.STONE).build()));
     public static final Block ROPE = register("rope", new RopeBlock(FabricBlockSettings.copy(Blocks.STONE).build()));
     public static final Block PULLEY_MAGNET = register("pulley_magnet", new MagnetPulleyBlock(FabricBlockSettings.copy(Blocks.STONE).build()));
     public static final Block CART_ASSEMBLER = register("cart_assembler", new Block(FabricBlockSettings.copy(Blocks.STONE).build()));
