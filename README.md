@@ -22,3 +22,12 @@ This mod is a port of Shimibub's mod for 1.14.4+ under the MIT License,
 The original mod is available at https://github.com/Creators-of-Create/Create and https://www.curseforge.com/minecraft/mc-mods/create
 
 You are allowed to fork, modify, port, publish, etc. under the MIT License
+
+
+****
+Big disclaimer I reset my pc twice recently and so I lost a lot of progress i made on a direct port. The mod is extremely diffuclt for someone who doesn't have a lot of experience porting/coding such a massive mod. I may revist this someday but as of 4/9/2020 I'm going to move onto other projects because this is particularly difficult 
+and will most likely need a lot of maturity in the Fabric mod ecosystem to become viable.
+-B0N
+
+P.S. if anyone wants to help the mod develop go ahead and send some commits my way, I might update this later today to have the main dev repo of Create and start the direct forge port again and in that case I'm going to need as much help as possible with rendering code etc. that I don't currently understand.
+****
