@@ -9,14 +9,14 @@
                 "item": "create:chromatic_compound"
             },
 			"G": {
-                "item": "minecraft:glass"
+                "tag": "forge:glass"
             },
             "E": {
-                "item": "create:placement_handgun"
+                "item": "create:handheld_blockzapper"
             }
         },
 	"result": {
-		"item": "create:placement_handgun",
+		"item": "create:handheld_blockzapper",
 		"count": 1
 	},
 	"component": "Scope",

@@ -1,13 +1,14 @@
 {
 	"credit": "Made with Blockbench",
-	"parent": "create:item/placement_handgun",
+	"parent": "block/block",
 	"ambientocclusion": false,
 	"textures": {
 		"6": "create:block/piston_bottom",
 		"7": "create:block/piston_inner",
 		"gearbox_top": "create:block/gearbox_top",
 		"gearbox": "create:block/gearbox",
-		"andesite_casing_short": "create:block/andesite_casing_short"
+		"andesite_casing_short": "create:block/andesite_casing_short",
+		"particle": "create:block/gearbox_top"
 	},
 	"elements": [
 		{

@@ -1,0 +1,99 @@
+{
+  "blaze_munch": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.generic.eat",
+        "type": "event"
+      }
+    ],
+    "subtitle": "create.subtitle.blaze_munch"
+  },
+  "blockzapper_confirm": {
+    "sounds": [
+      {
+        "name": "minecraft:block.note_block.bell",
+        "type": "event"
+      }
+    ],
+    "subtitle": "create.subtitle.blockzapper_confirm"
+  },
+  "blockzapper_deny": {
+    "sounds": [
+      {
+        "name": "minecraft:block.note_block.bass",
+        "type": "event"
+      }
+    ],
+    "subtitle": "create.subtitle.blockzapper_deny"
+  },
+  "blockzapper_place": {
+    "sounds": [
+      {
+        "name": "minecraft:block.note_block.basedrum",
+        "type": "event"
+      }
+    ],
+    "subtitle": "create.subtitle.blockzapper_place"
+  },
+  "mechanical_press_activation": {
+    "sounds": [
+      {
+        "name": "minecraft:block.anvil.land",
+        "type": "event"
+      }
+    ],
+    "subtitle": "create.subtitle.mechanical_press_activation"
+  },
+  "mechanical_press_activation_compounded_1": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.item.break",
+        "type": "event"
+      }
+    ]
+  },
+  "mechanical_press_activation_belt": {
+    "sounds": [
+      {
+        "name": "minecraft:block.wool.hit",
+        "type": "event"
+      }
+    ],
+    "subtitle": "create.subtitle.mechanical_press_activation_belt"
+  },
+  "mechanical_press_activation_belt_compounded_1": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.item.break",
+        "type": "event"
+      }
+    ]
+  },
+  "schematicannon_finish": {
+    "sounds": [
+      {
+        "name": "minecraft:block.note_block.bell",
+        "type": "event"
+      }
+    ],
+    "subtitle": "create.subtitle.schematicannon_finish"
+  },
+  "schematicannon_launch_block": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.generic.explode",
+        "type": "event"
+      }
+    ],
+    "subtitle": "create.subtitle.schematicannon_launch_block"
+  },
+  "slime_added": {
+    "sounds": [
+      {
+        "name": "minecraft:block.slime_block.place",
+        "type": "event"
+      }
+    ],
+    "subtitle": "create.subtitle.slime_added"
+  }
+}

@@ -6,17 +6,17 @@
         ],
         "key": {
             "B": {
-                "item": "create:brass_ingot"
+                "tag": "forge:ingots/brass"
             },
 			"R": {
-                "item": "minecraft:redstone"
+                "tag": "forge:dusts/redstone"
             },
             "E": {
-                "item": "create:placement_handgun"
+                "item": "create:handheld_blockzapper"
             }
         },
 	"result": {
-		"item": "create:placement_handgun",
+		"item": "create:handheld_blockzapper",
 		"count": 1
 	},
 	"component": "Retriever",
