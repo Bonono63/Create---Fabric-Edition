@@ -5,8 +5,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.function.Function;
 
-import javax.annotation.Nullable;
-
 import com.mrbonono63.create.content.contraptions.base.KineticTileEntityRenderer;
 import com.mrbonono63.create.content.contraptions.components.structureMovement.render.ContraptionRenderDispatcher;
 import com.mrbonono63.create.content.contraptions.relays.encased.CasingConnectivity;
@@ -33,31 +31,26 @@ import com.mrbonono63.create.foundation.utility.ghost.GhostBlocks;
 import com.mrbonono63.create.foundation.utility.outliner.Outliner;
 
 import net.minecraft.block.Block;
-import net.minecraft.client.Minecraft;
-import net.minecraft.client.renderer.BlockModelShapes;
-import net.minecraft.client.renderer.model.IBakedModel;
-import net.minecraft.client.renderer.model.ModelResourceLocation;
-import net.minecraft.client.settings.GraphicsFanciness;
-import net.minecraft.inventory.container.PlayerContainer;
+import net.minecraft.client.MinecraftClient;
+import net.minecraft.client.options.GraphicsMode;
+import net.minecraft.client.render.block.BlockModels;
+import net.minecraft.client.render.model.BakedModel;
+import net.minecraft.client.render.model.BakedModelManager;
+import net.minecraft.client.util.ModelIdentifier;
 import net.minecraft.item.Item;
-import net.minecraft.resources.IReloadableResourceManager;
-import net.minecraft.resources.IResourceManager;
-import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.text.ChatType;
-import net.minecraft.util.text.IFormattableTextComponent;
-import net.minecraft.util.text.StringTextComponent;
-import net.minecraft.util.text.TextComponentUtils;
-import net.minecraft.util.text.TextFormatting;
-import net.minecraft.util.text.event.ClickEvent;
-import net.minecraft.util.text.event.HoverEvent;
-import net.minecraft.world.IWorld;
+import net.minecraft.network.MessageType;
+import net.minecraft.text.*;
+import net.minecraft.util.Formatting;
+import net.minecraft.util.Identifier;
 import net.minecraft.world.WorldAccess;
+/*
 import net.minecraftforge.client.event.ModelBakeEvent;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.client.event.TextureStitchEvent;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
+*/
 import org.jetbrains.annotations.Nullable;
 
 public class CreateClient {
@@ -76,6 +69,7 @@ public class CreateClient {
 	private static AllColorHandlers colorHandlers;
 	private static CasingConnectivity casingConnectivity;
 
+	//
 	public static void addClientListeners(IEventBus modEventBus) {
 		modEventBus.addListener(CreateClient::clientInit);
 		modEventBus.addListener(CreateClient::onModelBake);
@@ -102,22 +96,25 @@ public class CreateClient {
 
 		ghostBlocks = new GhostBlocks();
 
-		com.simibubi.create.AllKeys.register();
-		com.simibubi.create.AllContainerTypes.registerScreenFactories();
+		com.mrbonono63.create.AllKeys.register();
+		com.mrbonono63.create.AllContainerTypes.registerScreenFactories();
 		// AllTileEntities.registerRenderers();
-		com.simibubi.create.AllEntityTypes.registerRenderers();
+		com.mrbonono63.create.AllEntityTypes.registerRenderers();
 		getColorHandler().init();
-		com.simibubi.create.AllFluids.assignRenderLayers();
+		com.mrbonono63.create.AllFluids.assignRenderLayers();
 		PonderIndex.register();
 		PonderIndex.registerTags();
 
 		UIRenderHelper.init();
 
-		IResourceManager resourceManager = Minecraft.getInstance()
+
+	}
+	//TODO model loading and texture loading
+/*
+	IResourceManager resourceManager = Minecraft.getInstance()
 			.getResourceManager();
 		if (resourceManager instanceof IReloadableResourceManager)
 			((IReloadableResourceManager) resourceManager).addReloadListener(new ResourceReloadHandler());
-	}
 
 	public static void onTextureStitch(TextureStitchEvent.Pre event) {
 		if (!event.getMap()
@@ -147,36 +144,36 @@ public class CreateClient {
 
 		getCustomRenderedItems().foreach((item, modelFunc) -> modelFunc.apply(null)
 			.getModelLocations()
-			.forEach(ModelLoader::addSpecialModel));
+			.forEach(BakedModelManager::addSpecialModel));
+	}
+*/
+	protected static ModelIdentifier getItemModelLocation(Item item) {
+		return new ModelIdentifier(item.toString(), "inventory");
 	}
 
-	protected static ModelResourceLocation getItemModelLocation(Item item) {
-		return new ModelResourceLocation(item.getRegistryName(), "inventory");
-	}
-
-	protected static List<ModelResourceLocation> getAllBlockStateModelLocations(Block block) {
-		List<ModelResourceLocation> models = new ArrayList<>();
-		block.getStateContainer()
-			.getValidStates()
+	protected static List<ModelIdentifier> getAllBlockStateModelLocations(Block block) {
+		List<ModelIdentifier> models = new ArrayList<>();
+		block.getStateManager()
+			.getStates()
 			.forEach(state -> {
-				models.add(getBlockModelLocation(block, BlockModelShapes.getPropertyMapString(state.getValues())));
+				models.add(getBlockModelLocation(block, BlockModels.propertyMapToString(state.getEntries())));
 			});
 		return models;
 	}
 
-	protected static ModelResourceLocation getBlockModelLocation(Block block, String suffix) {
-		return new ModelResourceLocation(block.getRegistryName(), suffix);
+	protected static ModelIdentifier getBlockModelLocation(Block block, String suffix) {
+		return new ModelIdentifier(block.getLootTableId(), suffix);
 	}
 
-	protected static <T extends IBakedModel> void swapModels(Map<ResourceLocation, IBakedModel> modelRegistry,
-		List<ModelResourceLocation> locations, Function<IBakedModel, T> factory) {
+	protected static <T extends BakedModel> void swapModels(Map<Identifier, BakedModel> modelRegistry,
+		List<ModelIdentifier> locations, Function<BakedModel, T> factory) {
 		locations.forEach(location -> {
 			swapModels(modelRegistry, location, factory);
 		});
 	}
 
-	protected static <T extends IBakedModel> void swapModels(Map<ResourceLocation, IBakedModel> modelRegistry,
-		ModelResourceLocation location, Function<IBakedModel, T> factory) {
+	protected static <T extends BakedModel> void swapModels(Map<Identifier, BakedModel> modelRegistry,
+		ModelIdentifier location, Function<BakedModel, T> factory) {
 		modelRegistry.put(location, factory.apply(modelRegistry.get(location)));
 	}
 
@@ -198,9 +195,9 @@ public class CreateClient {
 		return customBlockModels;
 	}
 
-	public static com.simibubi.create.AllColorHandlers getColorHandler() {
+	public static com.mrbonono63.create.AllColorHandlers getColorHandler() {
 		if (colorHandlers == null)
-			colorHandlers = new com.simibubi.create.AllColorHandlers();
+			colorHandlers = new com.mrbonono63.create.AllColorHandlers();
 		return colorHandlers;
 	}
 
@@ -228,25 +225,25 @@ public class CreateClient {
 	}
 
 	public static void checkGraphicsFanciness() {
-		Minecraft mc = Minecraft.getInstance();
+		MinecraftClient mc = MinecraftClient.getInstance();
 		if (mc.player == null)
 			return;
 
-		if (mc.gameSettings.graphicsMode != GraphicsFanciness.FABULOUS)
+		if (mc.options.graphicsMode != GraphicsMode.FABULOUS)
 			return;
 
 		if (AllConfigs.CLIENT.ignoreFabulousWarning.get())
 			return;
 
-		IFormattableTextComponent text = TextComponentUtils.bracketed(new StringTextComponent("WARN"))
-			.formatted(TextFormatting.GOLD)
-			.append(new StringTextComponent(
+		MutableText text = Texts.bracketed(new LiteralText("WARN"))
+			.formatted(Formatting.GOLD)
+			.append(new LiteralText(
 				" Some of Create's visual features will not be available while Fabulous graphics are enabled!"))
 			.styled(style -> style
 				.withClickEvent(new ClickEvent(ClickEvent.Action.RUN_COMMAND, "/create dismissFabulousWarning"))
 				.withHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT,
-					new StringTextComponent("Click here to disable this warning"))));
+					new LiteralText("Click here to disable this warning"))));
 
-		mc.ingameGUI.addChatMessage(ChatType.CHAT, text, mc.player.getUniqueID());
+		mc.inGameHud.addChatMessage(MessageType.CHAT, text, mc.player.getUuid());
 	}
 }
